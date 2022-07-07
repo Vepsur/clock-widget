@@ -10,15 +10,16 @@ function App() {
   const [clockStart, setClockStart] = React.useState(true);
   const [interv, setInterv] = React.useState(null);
   const [timerStatus, setTimerStatus] = React.useState(true);
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-  const appHeight = () => {
+  const appHeight = React.useCallback(() => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
+    console.log(vh);
+  }, [])
   window.addEventListener('resize', appHeight);
   appHeight();
-
-
 
   return (
     <div className="wrapper">
