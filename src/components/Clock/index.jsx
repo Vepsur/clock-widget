@@ -26,7 +26,7 @@ function Clock({ clockStart, selectedTheme }) {
         }
         if (clockStart) clockAnimation();
         startClock();
-      }, 30)
+      }, 40)
     }
     startClock();
 
