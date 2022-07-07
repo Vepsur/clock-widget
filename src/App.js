@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Menu from './components/Menu';
+import Themes from './components/Themes';
+import Clock from './components/Clock';
+import Timer from './components/Timer';
 
 function App() {
+  const [selectedTheme, setSelectedTheme] = React.useState('white');
+  const [clockStart, setClockStart] = React.useState(true);
+  const [interv, setInterv] = React.useState(null);
+  const [timerStatus, setTimerStatus] = React.useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Menu
+        clockStart={clockStart}
+        setClockStart={setClockStart}
+        interv={interv}
+        timerStatus={timerStatus}
+        setTimerStatus={setTimerStatus}
+      />
+      <Themes
+        setSelectedTheme={setSelectedTheme}
+        selectedTheme={selectedTheme}
+      />
+      <div className="content">
+        <div id="clock" className="visibleClock">
+          <Clock
+            clockStart={clockStart}
+            selectedTheme={selectedTheme}
+          />
+        </div>
+        <div id="timer" className="hiddenTimer">
+          <Timer
+            timerStatus={timerStatus}
+            setTimerStatus={setTimerStatus}
+            interv={interv}
+            setInterv={setInterv}
+            selectedTheme={selectedTheme}
+          />
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default App;
