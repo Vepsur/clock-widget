@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd728f01.css",
-    "main.js": "/static/js/main.6531f7ea.js",
-    "index.html": "/index.html",
-    "main.dd728f01.css.map": "/static/css/main.dd728f01.css.map",
-    "main.6531f7ea.js.map": "/static/js/main.6531f7ea.js.map"
+    "main.css": "/clock-widget/static/css/main.dd728f01.css",
+    "main.js": "/clock-widget/static/js/main.6531f7ea.js",
+    "index.html": "/clock-widget/index.html",
+    "main.dd728f01.css.map": "/clock-widget/static/css/main.dd728f01.css.map",
+    "main.6531f7ea.js.map": "/clock-widget/static/js/main.6531f7ea.js.map"
   },
   "entrypoints": [
     "static/css/main.dd728f01.css",
